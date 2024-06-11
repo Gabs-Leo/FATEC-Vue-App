@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    <a href="https://ygoprodeck.com/api-guide/" target="_blank">
+      <img style="border-radius: 6px;" src="https://cdn.shopify.com/s/files/1/0084/2412/files/Deck_Builder_480x480.png?v=1663251348" class="logo" alt="Vite logo" />
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
