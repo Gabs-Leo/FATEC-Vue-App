@@ -4,7 +4,7 @@ import { api } from '../services/api';
 
 defineProps<{ msg: string }>()
 
-const cards = ref([])
+const cards = ref<Card[]>([])
 const fetchCards = async (card?:string) => {
   await api.get(`?fname=${card || ""}&num=30&offset=0`).then((i) => {
     cards.value = i.data.data;
@@ -13,9 +13,6 @@ const fetchCards = async (card?:string) => {
 const onInputChange = (event: Event) => {
   const target = event.target as HTMLInputElement;
   fetchCards(target.value);
-}
-const handleClick = (event: Event) => {
-  
 }
 fetchCards("");
 
@@ -44,11 +41,6 @@ const showModal = (card:Card) => {
   }
 };
 
-const hideModal = () => {
-  if (modalInstance) {
-    modalInstance.hide();
-  }
-};
 </script>
 
 <template>
